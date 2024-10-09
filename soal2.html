@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Daftar Menu</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Daftar Menu Restoran Salman</h1>
+      <h1>
+        <img src="logo.png" alt="logo">
+      </h1>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Menu</a>
+        </li>
+        <li>
+          <a href="profil.html" target="_blank">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th title="Kolom Nama Makanan">Nama Menu</th>
+          <th title="Kolom Harga Makanan">Harga</th>
+          <th title="Kolom Tautan Makanan">Tautan</th>
+          <th title="Kolom Gambar Makanan">Gambar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ayam Geprek</td>
+          <td>Rp 10.000</td>
+          <td>
+            <a href="https://g.co/kgs/egr4Gky" target="_blank">Detail</a>
+          </td>
+          <td>
+            <img
+              src="https://i.pinimg.com/564x/77/f8/d7/77f8d706b42ea7f887bfdd863a7763f7.jpg"
+              alt="Ayam Geprek"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Nasi Goreng</td>
+          <td>Rp 13.000</td>
+          <td>
+            <a
+              href="https://id.wikipedia.org/wiki/Nasi_goreng_(Indonesia)"
+              target="_blank"
+              >Detail</a
+            >
+          </td>
+          <td>
+            <img
+              src="https://i.pinimg.com/564x/b2/31/9b/b2319bd02a85d4bcb9f1b36c6759c862.jpg"
+              alt="Nasi Goreng"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Mie Ayam</td>
+          <td>Rp 15.000</td>
+          <td>
+            <a href="https://id.wikipedia.org/wiki/Mi_ayam" target="_blank"
+              >Detail</a
+            >
+          </td>
+          <td>
+            <img
+              src="https://i.pinimg.com/564x/2c/bf/9b/2cbf9bccdbd9c21769c03392dd695852.jpg"
+              alt="Mie Ayam"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section>
+      <h2>Form Pesanan</h2>
+      <form id="pesananForm">
+          <label>
+              <input type="checkbox" name="menu" value="Ayam Geprek"> Ayam Geprek
+          </label><br>
+          <label>
+              <input type="checkbox" name="menu" value="Nasi Goreng"> Nasi Goreng
+          </label><br>
+          <label>
+              <input type="checkbox" name="menu" value="Mie Ayam"> Mie Ayam
+          </label><br><br>
+          <button type="button" onclick="kirimPesanan()">Akhiri Pesanan</button>
+      </form>
+  </section>
+
+
+    <footer>
+      &copy; Copyright Muhammad Salman Putra Yulio 2024
+    </footer>
+
+    <script src="pesanan.js"></script>
+
+  </body>
+</html>
