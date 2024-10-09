@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertanyaan 2</title>
+</head>
+<body>
+    <p>
+        <script language="JavaScript">
+
+        const students = [
+            { nama: 'Andi', nilai: { matematika: 70, biologi: 80, fisika: 70, kimia: 90 } },
+            { nama: 'Ria', nilai: { matematika: 90, biologi: 65, fisika: 80, kimia: 70 } },
+            { nama: 'Bima', nilai: { matematika: 100, biologi: 70, fisika: 95, kimia: 50 } },
+            { nama: 'Toni', nilai: { matematika: 60, biologi: 60, fisika: 70, kimia: 60 } },
+            { nama: 'Putri', nilai: { matematika: 70, biologi: 100, fisika: 80, kimia: 75 } }
+        ];
+
+        const passingScore = 60;
+
+        function checkGraduation(student) {
+            const { matematika, biologi, fisika, kimia } = student.nilai;
+            if (matematika >= passingScore && biologi >= passingScore && fisika >= passingScore && kimia >= passingScore) {
+                return true;
+            } else {
+                return false; // Tidak lulus
+                }
+            }
+
+            let passed = [];
+            let failed = [];
+
+            students.forEach(student => {
+                if (checkGraduation(student)) {
+                    passed.push(student.nama);
+                } else {
+                    failed.push(student.nama);
+                }
+            });
+            
+            if (passed.length === students.length) {
+                console.log("Semua Lulus");
+            } else if (failed.length === students.length) {
+                console.log("Semua Tidak Lulus");
+            } else {
+                console.log("Lulus: " + passed.join(', '));
+                console.log("Tidak Lulus: " + failed.join(', '));
+            }
+
+        </script>
+    </p>
+</body>
+</html>
