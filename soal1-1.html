@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan JavaScript</title>
+</head>
+<body>
+    <p>
+        <script language="JavaScript">
+            
+        const customers = [
+            { name: 'Lena', isMember: true },
+            { name: 'Rio', isMember: false }
+        ];
+        function checkMembership(customer) {
+            if (customer.isMember) {
+                console.log(customer.name + " Mendapatkan diskon 5%");
+            } else {
+                console.log(customer.name + " Tidak mendapatkan diskon");
+            }
+        }
+        customers.forEach(checkMembership);
+
+        </script>
+    </p>
+</body>
+</html>
