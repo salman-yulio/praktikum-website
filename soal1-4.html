@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perhitungan Total Pembelian</title>
+</head>
+<body>
+    <p>
+    <script language="JavaScript">
+        function hitungPembelian() {
+            let hargaBarang = parseFloat(prompt("Masukkan harga per barang:"));
+            let jumlahBarang = parseInt(prompt("Masukkan jumlah barang yang dibeli:"));
+
+            let totalHarga = hargaBarang * jumlahBarang;
+
+            let diskon = 0;
+            if (jumlahBarang > 50) {
+                diskon = totalHarga * 0.10;
+            }
+
+            let hargaSetelahDiskon = totalHarga - diskon;
+
+            alert("Total harga tanpa diskon: Rp" + totalHarga.toFixed(2) +
+                  "\nDiskon yang diberikan: Rp" + diskon.toFixed(2) +
+                  "\nHarga setelah diskon: Rp" + hargaSetelahDiskon.toFixed(2));
+        }
+    </script>
+    </p>
+    <h1>Perhitungan Total Pembelian</h1>
+    <button onclick="hitungPembelian()">Hitung Pembelian</button>
+</body>
+</html>
