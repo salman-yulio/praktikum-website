@@ -2,25 +2,26 @@
 <html>
 <head>
     <title>Perhitungan Kunjungan Salon</title>
-    <script type="text/javascript">
-        function cekBonus() {
-            // Mendapatkan input dari user
-            let totalKunjungan = parseInt(prompt("Masukkan total kunjungan salon:"));
-
-            // Menghitung jumlah potongan kupon
-            let kupon = totalKunjungan;
-
-            // Menentukan apakah pelanggan berhak mendapatkan kunjungan gratis
-            let bonus = (totalKunjungan >= 10) ? "Anda berhak mendapatkan 1 kali kunjungan gratis!" : "Anda belum mendapatkan kunjungan gratis.";
-
-            // Menampilkan hasil di alert
-            alert("Total kunjungan Anda: " + totalKunjungan + 
-                  "\nPotongan kupon yang Anda miliki: " + kupon + 
-                  "\n" + bonus);
-        }
-    </script>
 </head>
 <body>
+    <p>
+        <script language="JavaScript">
+            function cekBonus() {
+            let totalKunjungan = parseInt(prompt("Masukkan total kunjungan salon:"));
+
+            let kupon = totalKunjungan;
+
+            let bonusKunjungan = Math.floor(totalKunjungan / 10);
+
+            let bonusMessage = (bonusKunjungan > 0) ? "Anda mendapatkan " + bonusKunjungan + " kali kunjungan gratis!" 
+                                                    : "Anda belum mendapatkan kunjungan gratis.";
+
+            alert("Total kunjungan Anda: " + totalKunjungan + 
+                  "\nPotongan kupon yang Anda miliki: " + kupon + 
+                  "\n" + bonusMessage);
+        }
+            </script>
+    </p>
     <h1>Perhitungan Kunjungan Salon</h1>
     <button onclick="cekBonus()">Cek Bonus</button>
 </body>
